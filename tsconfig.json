@@ -3,7 +3,6 @@
     // "target": "ES6" /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */,
     "module": "Preserve" /* Specify what module code is generated. */,
     "rootDir": "./" /* Specify the root folder within your source files. */,
-    // "typeRoots": ["types"],
     "declaration": true /* Generate .d.ts files from TypeScript and JavaScript files in your project. */,
     "sourceMap": true /* Create source map files for emitted JavaScript files. */,
     "declarationMap": true /* Create sourcemaps for d.ts files. */,

@@ -1,31 +1,63 @@
 {
   "name": "libp2p-ts-ctx",
-  "version": "0.0.2",
+  "version": "0.0.1",
   "main": "./dist",
   "bin": {
     "libp2p-ts-ctx": "./src"
   },
   "scripts": {
-    "back": "git add . && git commit -m 'a' && git push",
-    "publish": "yarn build && yarn back && npm publish --access public",
-    "build": "rm -r ./dist && rm -r ./types && tsc",
-    "dev": "tsx src/dev.ts",
-    "devjs": "node dist/src/dev.js"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "format": "prettier --write src",
+    "lint": "prettier . --check && next lint",
+    "tsc": "tsc --noEmit -p tsconfig.json",
+    "protobuf": "protons src/lib/protobuf/*.proto",
+    "back": "git add . && git commit -m 'a' && git push"
   },
-  "type": "module",
-  "license": "MIT",
-  "author": "Guthub:TonyRHouston",
-  "description": "",
   "dependencies": {
-    "libp2p-ts": "0.0.8",
-    "react": "^19.0.0",
-    "typescript": "^5.8.2"
-  },
-  "paths": {
-    "@/*": "src/*"
+    "@chainsafe/libp2p-gossipsub": "^14.1.0",
+    "@chainsafe/libp2p-noise": "^16.0.3",
+    "@chainsafe/libp2p-yamux": "^7.0.1",
+    "@helia/delegated-routing-v1-http-api-client": "^4.1.1",
+    "@libp2p/bootstrap": "^11.0.28",
+    "@libp2p/circuit-relay-v2": "^3.2.4",
+    "@libp2p/identify": "^3.0.23",
+    "@libp2p/interface": "^2.6.1",
+    "@libp2p/kad-dht": "14.2.11",
+    "@libp2p/ping": "^2.0.23",
+    "@libp2p/pubsub-peer-discovery": "^11.0.1",
+    "@libp2p/webrtc": "^5.2.5",
+    "@libp2p/websockets": "^9.2.3",
+    "@libp2p/webtransport": "^5.0.33",
+    "@multiformats/multiaddr": "^12.4.0",
+    "eciesjs": "^0.4.14",
+    "elliptic": "^6.6.1",
+    "ethereum-cryptography": "^3.1.0",
+    "it-length-prefixed": "^10.0.1",
+    "it-map": "^3.1.1",
+    "it-pipe": "^3.0.1",
+    "it-protobuf-stream": "^1.1.5",
+    "libp2p": "^2.7.4",
+    "libp2p-ts": "^0.0.11",
+    "protons-runtime": "^5.5.0",
+    "react": "18.3.1",
+    "uint8arrays": "^5.1.0"
   },
   "devDependencies": {
     "@types/elliptic": "^6.4.18",
-    "@types/react": "^19.0.10"
+    "@types/react": "18.3.3",
+    "eslint": "8.57.0",
+    "eslint-config-next": "14.2.3",
+    "prettier": "3.4.2",
+    "typescript": "^5.8.2"
+  },
+  "prettier": {
+    "semi": false,
+    "singleQuote": true,
+    "trailingComma": "all",
+    "printWidth": 120,
+    "tabWidth": 2,
+    "bracketSpacing": true
   }
 }
