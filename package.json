@@ -1,12 +1,12 @@
 {
   "name": "libp2p-ts-ctx",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "index.ts",
   "repository": "https://github.com/TonyRHouston/libp2p-ts-ctx.git",
   "author": "tony <tonhousto@gmail.com>",
   "license": "MIT",
   "dependencies": {
-    "libp2p-ts": "../libp2p-ts",
+    "libp2p-ts": "^0.0.13",
     "react": "^19.0.0"
   }
 }

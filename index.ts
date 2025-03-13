@@ -1,5 +1,5 @@
-export * from './src/context/ctx.tsx'
-export * from './src/context/chat-ctx.tsx'
+export * from './src/context/ctx'
+export * from './src/context/chat-ctx'
 import {Libp2pTypeC} from  'libp2p-ts'
 
 declare global {
