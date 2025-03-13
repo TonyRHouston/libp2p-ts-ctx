@@ -1,0 +1,31 @@
+{
+  "name": "libp2p-ts-ctx",
+  "version": "0.0.1",
+  "main": "./dist",
+  "bin": {
+    "libp2p-ts-ctx": "./src"
+  },
+  "scripts": {
+    "back": "git add . && git commit -m 'a' && git push",
+    "publish": "yarn build && yarn back && npm publish --access public",
+    "build": "rm -r ./dist && rm -r ./types && tsc",
+    "dev": "tsx src/dev.ts",
+    "devjs": "node dist/src/dev.js"
+  },
+  "type": "module",
+  "license": "MIT",
+  "author": "Guthub:TonyRHouston",
+  "description": "",
+  "dependencies": {
+    "libp2p-ts": "0.0.8",
+    "react": "^19.0.0",
+    "typescript": "^5.8.2"
+  },
+  "paths": {
+    "@/*": "src/*"
+  },
+  "devDependencies": {
+    "@types/elliptic": "^6.4.18",
+    "@types/react": "^19.0.10"
+  }
+}
